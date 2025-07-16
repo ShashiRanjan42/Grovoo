@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }))
 
 //Cors
 app.use(cors({
-  origin: ["http://localhost:3000", "*"],
+  origin: ["http://localhost:3000", "https://grovoo-orpin.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
   credentials: true,
 }));
