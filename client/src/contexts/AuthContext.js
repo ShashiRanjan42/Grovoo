@@ -49,7 +49,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password, phone) => {
     try {
-      const response = await axios.post(`https://grovoo.onrender.com/api/auth/login`, { email, password, phone })
+      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/api/auth/login`, { email, password, phone })
       const { token, user } = response.data
 
       localStorage.setItem("token", token)
